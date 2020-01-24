@@ -9,30 +9,184 @@
   <body>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
    <main id = 'main-doc'>
-     <section class = 'main-section' id = 'header1'>
-       <h3>Header 1</h3>
-       <p></p>
-       <p></p>
+     <nav id="navbar">
+       <header>Javascript</header>
+       <a class="nav-link" href="#Introduction">Introduction</a>
+       <a class="nav-link" href="#history">History</a>
+       <a class="nav-link" href="#functions">Functions</a>
+       <a class="nav-link" href="#objects">Objects</a>
+       <a class="nav-link" href="#arrays">Arrays</a>
+       
+     </nav>
+     <section class = 'main-section' id = 'Introduction'>
+       <header>Introduction</header>
+       <p>
+        JavaScript , often abbreviated as JS, is a high-level, just-in-time compiled, 
+        multi-paradigm programming language that conforms to the ECMAScript specification. JavaScript 
+        has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.
+
+        Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web. 
+        JavaScript enables interactive web pages and is an essential part of web applications. 
+        The vast majority of websites use it,[12] and major web browsers have a dedicated JavaScript 
+        engine to execute it.
+       </p>
+       <p>
+        Initially only implemented client-side in web browsers, JavaScript engines are now embedded 
+        in many other types of host software, including server-side in web servers and databases, and 
+        in non-web programs such as word processors and PDF software, and in runtime environments that 
+        make JavaScript available for writing mobile and desktop applications, including desktop widgets.
+
+        The terms Vanilla JavaScript and Vanilla JS refer to JavaScript not extended by any frameworks 
+        or additional libraries. Scripts written in Vanilla JS are plain JavaScript code.
+        
+        Although there are similarities between JavaScript and Java, including language name, syntax, and 
+        respective standard libraries, the two languages are distinct and differ greatly in design. JavaScript 
+        was influenced by programming languages such as Self and Scheme.[15] The JSON serialization format, 
+        used to store data structures in files or transmit them across networks, is based on JavaScript.
+       </p>
+       <p>An example of Javascript code is:</p>
+       <code>
+         console.log('Hello World!');
+       </code>
      </section>
-     <section class = 'main-section' id = 'header2'>
-      <h3>Header 2</h3>
-      <p></p>
-      <p></p>
+     <section class = 'main-section' id = 'history'>
+      <header>History</header>
+      <p>
+        In 1993, the National Center for Supercomputing Applications (NCSA), a unit of the University of
+         Illinois at Urbana-Champaign, released NCSA Mosaic, the first popular graphical Web browser, 
+         which played an important part in expanding the growth of the nascent World Wide Web beyond the 
+         NeXTSTEP niche where the WorldWideWeb had formed three years earlier. In 1994, a company called 
+         Mosaic Communications was founded in Mountain View, California and employed many of the original 
+         NCSA Mosaic authors to create Mosaic Netscape. However, it intentionally shared no code with NCSA Mosaic. 
+      </p>
+      <p>
+        There is a common misconception that JavaScript was influenced by an earlier Web page scripting language 
+        developed by Nombas named Cmm (not to be confused with the later C-- created in 1997).[22][23] 
+        Brendan Eich, however, had never heard of Cmm before he created LiveScript. Nombas did pitch 
+        their embedded Web page scripting to Netscape, though Web page scripting was not a new concept, 
+        as shown by the ViolaWWW Web browser.[24] Nombas later switched to offering JavaScript instead of
+         Cmm in their ScriptEase product and was part of the TC39 group that standardized ECMAScript.
+      </p>
+      
      </section>
-     <section class = 'main-section' id = 'header3'>
-      <h3>Header 3</h3>
-      <p></p>
-      <p></p>
+     <section class = 'main-section' id = 'functions'>
+      <header>Functions</header>
+      <p>
+        A function is first-class; a function is considered to be an object. As such, a function may have properties
+         and methods, such as .call() and .bind().[48] A nested function is a function defined within another 
+         function. It is created each time the outer function is invoked. In addition, each nested function forms 
+         a lexical closure: The lexical scope of the outer function (including any constant, local variable, or 
+         argument value) becomes part of the internal state of each inner function object, even after execution 
+         of the outer function concludes.[49] JavaScript also supports anonymous functions.
+      </p>
+      <p>
+        
+        JavaScript natively supports various function-based implementations of Role patterns like 
+        Traits[51][52] and Mixins.[53] Such a function defines additional behavior by at least one 
+        method bound to the this keyword within its function body. A Role then has to be delegated 
+        explicitly via call or apply to objects that need to feature additional behavior that is not 
+        shared via the prototype chain.
+      </p>
+      <ul>
+        <li>A function takes in a class</li>
+        <li>It can involve arrays</li>
+        <li>It requires a return value</li>
+      </ul>
+      <code>
+        // Declares a function-scoped variable named `x`, and implicitly assigns the<br>
+        // special value `undefined` to it.<br>
+        var x;<br>
+
+        // More explicit version of the above.<br>
+        var x2 = undefined;<br>
+
+        // Declares a block-scoped variable named `y`, and implicitly sets it to<br>
+        // `undefined`. The `let` keyword was introduced in ECMAScript 2015.<br>
+        let y;<br>
+
+        // More explicit version of the above.<br>
+        let y2 = undefined;<br>
+
+        // Declares a block-scoped, un-reassign-able variable named `z`, and sets it to<br>
+        // `undefined`. The `const` keyword was also introduced in ECMAScript 2015, and<br>
+        // must be explicitly assigned to.<br>
+        const z = undefined;<br>
+
+        // Declares a variable named `myNumber`, and assigns a number literal (the value<br>
+        // `2`) to it.<br>
+        let myNumber = 2;<br>
+
+        // Reassigns `myNumber`, setting it to a string literal (the value `"foo"`).<br>
+        // JavaScript is a dynamically-typed language, so this is legal.<br>
+        myNumber = "foo";<br>
+      </code>
+      <code>
+        function factorial(n) {<br>
+          if (n === 0)<br>
+              return 1; // 0! = 1<br>
+      
+          return n * factorial(n - 1);<br>
+      }<br>
+      
+      factorial(3); // returns 6<br>
+      </code>
      </section>
-     <section class = 'main-section' id= 'header4'>
-      <h3>Header 4</h3>
-      <p></p>
-      <p></p>
+     <section class = 'main-section' id= 'arrays'>
+      <header>Arrays</header>
+      <p>
+        Arrays are list-like objects whose prototype has methods to perform traversal and mutation 
+        operations. Neither the length of a JavaScript array nor the types of its elements are fixed.
+         Since an array's length can change at any time, and data can be stored at non-contiguous 
+         locations in the array, JavaScript arrays are not guaranteed to be dense; this depends on 
+         how the programmer chooses to use them. 
+      </p>
+      <p>
+        Arrays cannot use strings as element indexes (as in an associative array) but must use 
+        integers. Setting or accessing via non-integers using bracket notation (or dot notation) 
+        will not set or retrieve an element from the array list itself, but will set or access a 
+        variable associated with that array's object property collection.
+      </p>
+      <ul>
+        <li>It can take in Objects and functions</li>
+        <li>Its values are seperated with a comma(,)</li>
+      </ul>
+      <code>
+        let fruits = ['Apple', 'Banana']<br>
+
+        console.log(fruits.length)<br>
+        // 2<br>
+      </code>
      </section>
-     <section class = 'main-section' id = 'header5'>
-      <h3>Header 5</h3>
-      <p></p>
-      <p></p>
+     <section class = 'main-section' id = 'objects'>
+      <header>Objects</header>
+      <p>
+        A JavaScript object has properties associated with it. A property of an object can be 
+        explained as a variable that is attached to the object. Object properties are basically 
+        the same as ordinary JavaScript variables, except for the attachment to objects
+      </p>
+      <p>
+        Like all JavaScript variables, both the object name (which could be a normal variable) and 
+        property name are case sensitive. You can define a property by assigning it a value. For 
+        example, let's create an object named myCar and give it properties named make, model, and 
+        year as follows:
+      </p>
+      <code>
+        // four variables are created and assigned in a single go, 
+        // separated by commas<br>
+        var myObj = new Object(),<br>
+            str = 'myString',<br>
+            rand = Math.random(),<br>
+            obj = new Object();<br>
+
+        myObj.type              = 'Dot syntax';<br>
+        myObj['date created']   = 'String with space';<br>
+        myObj[str]              = 'String value';<br>
+        myObj[rand]             = 'Random Number';<br>
+        myObj[obj]              = 'Object';<br>
+        myObj['']               = 'Even an empty string';<br>
+
+        console.log(myObj);<br>
+      </code>
      </section>
    </main>
 
